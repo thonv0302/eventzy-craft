@@ -1,13 +1,12 @@
+import "./globals.css";
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import LanguageSwitcher from "../components/LanguageSwitcher";
-import { NextIntlClientProvider } from 'next-intl';
-import { hasLocale } from 'next-intl';
-import { notFound } from 'next/navigation';
-import { routing } from '@/i18n/routing';
-import { setRequestLocale } from 'next-intl/server';
-import { Link } from "@/i18n/navigation";
+import { notFound } from "next/navigation";
+import { NextIntlClientProvider } from "next-intl";
+import { hasLocale } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
+import { routing } from "@/i18n/routing";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -26,13 +25,12 @@ export const metadata: Metadata = {
 type RootLayoutProps = {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
-}
+};
 
 export default async function RootLayout({
   children,
-  params
+  params,
 }: Readonly<RootLayoutProps>) {
-
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) {
     notFound();
@@ -40,16 +38,11 @@ export default async function RootLayout({
   setRequestLocale(locale);
 
   return (
-    <html lang={locale} className="mdl-js"
-    >
+    <html lang={locale} className="mdl-js">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <NextIntlClientProvider>
-          <LanguageSwitcher />
-          <Link href={'/blog'} >Tho</Link>
-          {children}
-        </NextIntlClientProvider>
+        <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>
     </html>
   );

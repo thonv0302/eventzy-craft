@@ -6,11 +6,11 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint --fix"
+    "lint": "eslint .",
+    "lint-fix": "next lint --fix"
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.6.1",
-    "eslint-plugin-simple-import-sort": "^12.1.1",
     "negotiator": "^1.0.0",
     "next": "15.5.2",
     "next-intl": "^4.3.6",
@@ -19,14 +19,18 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@eslint/js": "^9.35.0",
     "@tailwindcss/postcss": "^4",
     "@types/negotiator": "^0.6.4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "15.5.2",
+    "eslint": "^9.35.0",
+    "eslint-config-next": "^15.5.2",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "globals": "^16.3.0",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "typescript-eslint": "^8.43.0"
   }
 }
