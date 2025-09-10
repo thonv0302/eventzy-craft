@@ -1,8 +1,18 @@
 {
-  "products": {
-    "cart": "Add to Cart"
+  "validation": {
+    "emailRequired": "Email is required",
+    "invalidEmail": "invalidEmail",
+    "passwordRequired": "passwordRequired",
+    "passwordMin": "passwordMin"
   },
-  "signIn": {
-    "backToHome": "Back to Home"
+  "auth": {
+    "backToHome": "Back to Home",
+    "trustText": "Join thousands of event creators who trust EventzyCraft",
+    "lovedByUsers": "Loved by users",
+    "signIn": {
+      "test": "adfasdf",
+      "welcomeBack": "Welcome back",
+      "signInSubtitle": "Sign in to continue creating amazing events"
+    }
   }
 }

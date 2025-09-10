@@ -1,4 +1,4 @@
-import LanguageSwitcher from "@/app/components/LanguageSwitcher";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 type AdminLayoutProps = {
   children: React.ReactNode;

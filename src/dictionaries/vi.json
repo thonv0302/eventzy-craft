@@ -1,8 +1,17 @@
 {
-  "products": {
-    "cart": "Toevoegen aan Winkelwagen"
+  "validation": {
+    "emailRequired": "Email is required",
+    "invalidEmail": "invalidEmail",
+    "passwordRequired": "passwordRequired",
+    "passwordMin": "passwordMin"
   },
-  "signIn": {
-    "backToHome": "Quay về trang chủ"
+  "auth": {
+    "trustText": "Hàng nghìn nhà tổ chức sự kiện tin tưởng EventzyCraft",
+    "lovedByUsers": "Được người dùng yêu thích",
+    "backToHome": "Quay về trang chủ",
+    "signIn": {
+      "welcomeBack": "Chào mừng bạn quay lại",
+      "signInSubtitle": "Đăng nhập để tiếp tục tạo ra những sự kiện tuyệt vời"
+    }
   }
 }
