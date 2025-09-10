@@ -1,5 +1,8 @@
 {
   "products": {
     "cart": "Add to Cart"
+  },
+  "signIn": {
+    "backToHome": "Back to Home"
   }
 }

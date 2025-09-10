@@ -1,5 +1,8 @@
 {
   "products": {
     "cart": "Toevoegen aan Winkelwagen"
+  },
+  "signIn": {
+    "backToHome": "Quay về trang chủ"
   }
 }

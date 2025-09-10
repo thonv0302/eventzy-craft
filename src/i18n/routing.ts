@@ -10,6 +10,12 @@ export const routing = defineRouting({
     pathnames: {
         '/blog': {
             vi: '/leistungen'
+        },
+        'sign-in': {
+            vi: 'dang-nhap'
+        },
+        'sign-up': {
+            vi: 'dang-ky'
         }
     }
 });
