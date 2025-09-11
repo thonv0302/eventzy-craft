@@ -12,7 +12,9 @@
     "signIn": {
       "test": "adfasdf",
       "welcomeBack": "Welcome back",
-      "signInSubtitle": "Sign in to continue creating amazing events"
+      "signInSubtitle": "Sign in to continue creating amazing events",
+      "signIn": "Sign In",
+      "enterCredentials": "Enter your credentials to access your account"
     }
   }
 }

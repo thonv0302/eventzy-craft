@@ -6,10 +6,14 @@ export const getValidationRules = () => {
   return {
     email: {
       required: t("emailRequired"),
-      pattern: {
-        value: /^\S+@\S+$/i,
-        message: t("invalidEmail"),
-      },
+      // pattern: {
+      //   value: /^\S+@\S+$/i,
+      //   message: t("invalidEmail"),
+      // },
+      validate: (value: any) => {
+        console.log('vao day', value);
+        return value.endsWith("@example.com") || "Email must end with @example.com"
+      }
     },
     password: {
       required: t("passwordRequired"),

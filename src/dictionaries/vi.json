@@ -11,7 +11,9 @@
     "backToHome": "Quay về trang chủ",
     "signIn": {
       "welcomeBack": "Chào mừng bạn quay lại",
-      "signInSubtitle": "Đăng nhập để tiếp tục tạo ra những sự kiện tuyệt vời"
+      "signInSubtitle": "Đăng nhập để tiếp tục tạo ra những sự kiện tuyệt vời",
+      "signIn": "Đăng nhập",
+      "enterCredentials": "Nhập thông tin đăng nhập của bạn để truy cập tài khoản"
     }
   }
 }
