@@ -13,7 +13,10 @@
       "welcomeBack": "Chào mừng bạn quay lại",
       "signInSubtitle": "Đăng nhập để tiếp tục tạo ra những sự kiện tuyệt vời",
       "signIn": "Đăng nhập",
-      "enterCredentials": "Nhập thông tin đăng nhập của bạn để truy cập tài khoản"
+      "enterCredentials": "Nhập thông tin đăng nhập của bạn để truy cập tài khoản",
+      "password": "Mật khẩu",
+      "orContinueWith": "Hoặc tiếp tục với",
+      "emailAddress": "Địa chỉ email"
     }
   }
 }

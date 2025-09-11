@@ -14,7 +14,10 @@
       "welcomeBack": "Welcome back",
       "signInSubtitle": "Sign in to continue creating amazing events",
       "signIn": "Sign In",
-      "enterCredentials": "Enter your credentials to access your account"
+      "enterCredentials": "Enter your credentials to access your account",
+      "password": "Password",
+      "orContinueWith": "Or continue with",
+      "emailAddress": "Email address"
     }
   }
 }

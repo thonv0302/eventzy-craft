@@ -134,4 +134,8 @@
       hsl(var(--brand-gradient-to))
     );
   }
+
+  .focus-visible\:ring-red-500\/50:focus-visible {
+    --tw-ring-color: color-mix(in oklab, #ef4444 50%, transparent);
+  }
 }
