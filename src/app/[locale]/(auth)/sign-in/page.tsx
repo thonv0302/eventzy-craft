@@ -66,10 +66,10 @@ export default function SignIn() {
   const { control, formState } = form;
   return (
     <>
-      <div className="text-center mb-2">
+      {/* <div className="text-center mb-2">
         <h1 className="text-3xl font-bold">{t("welcomeBack")}</h1>
         <p className="text-muted-foreground">{t("signInSubtitle")}</p>
-      </div>
+      </div> */}
       <Card className="border-0 shadow-xl">
         <CardHeader className="space-y-1 pb-4">
           <CardTitle className="text-2xl text-center">{t("signIn")}</CardTitle>
