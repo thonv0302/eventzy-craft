@@ -48,14 +48,18 @@ import { SubmitButton } from "@/components/form/submit-button";
 import Google from "@/components/icon/google";
 import Facebook from "@/components/icon/facebook";
 import signInApi from "@/axios/api/signInApi";
+import { Cookie, useAuthStore } from "@/stores/auth";
 
 export default function SignIn() {
+  const { auth, signIn } = useAuthStore()
+
+
   const t = useTranslations("auth.signIn");
 
   const [showPassword, setShowPassword] = useState(false);
 
   const onSubmit = (values: z.infer<typeof formLoginSchema>) => {
-    signInApi.signIn(values);
+    signIn(values);
   };
 
   const form = useForm<z.infer<typeof formLoginSchema>>({
@@ -161,6 +165,8 @@ export default function SignIn() {
               </span>
             </div>
           </div>
+
+          {Cookie.get('tho')}
 
           {/* Social Sign In Options */}
           <div className="grid grid-cols-2 gap-4">

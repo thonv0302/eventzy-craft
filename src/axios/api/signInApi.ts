@@ -7,6 +7,10 @@ class SignInApi extends AxiosBase {
 
   public async signIn(payload: any) {
     console.log("payload", payload);
+    return {
+      accessToken: 'ádfasfdsadf',
+      refreshToken: 'ádfasdfasfasfdasdf'
+    }
   }
 }
 const signInApi = new SignInApi();

@@ -1,5 +1,11 @@
+import { Cookie } from "@/stores/auth"
+
+// import {Cookie}
 function Blog() {
-    return <>Blog</>
+
+    let abc = Cookie.get('tho')
+
+    return <>Blog </>
 }
 
 export default Blog
