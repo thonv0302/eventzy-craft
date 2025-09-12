@@ -30,7 +30,7 @@ interface AuthState {
 
 export const useAuthStore = create<AuthState>((set) => (
     {
-        auth: null,
+        auth: Cookie.get("session") || null,
         signIn: async (payload: any) => {
             console.log('payload: ', payload);
 
