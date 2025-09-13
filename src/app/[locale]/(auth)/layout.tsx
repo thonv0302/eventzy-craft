@@ -44,7 +44,7 @@ export default function AuthLayout({ children }: AdminLayoutProps) {
       </div>
       <div className="w-full max-w-md relative z-10">
         <div className="text-center mb-8">
-          <Link href={"/blog"} className="inline-flex items-center gap-2 mb-6">
+          <Link href={"/"} className="inline-flex items-center gap-2 mb-6">
             <Button variant="ghost" size="sm">
               <ArrowLeft className="h-4 w-4 mr-2" />
               {t("backToHome")}
@@ -60,30 +60,6 @@ export default function AuthLayout({ children }: AdminLayoutProps) {
           </div>
         </div>
         {children}
-
-        <div className="mt-8 text-center">
-          <ThemeSwitcher />
-
-          <p className="text-sm text-muted-foreground mb-4">{t("trustText")}</p>
-          <div className="flex justify-center gap-6">
-            <div className="flex items-center gap-1">
-              <Star className="h-4 w-4 text-yellow-500" />
-              <span className="text-xs text-muted-foreground">
-                4.9/5 rating
-              </span>
-            </div>
-            <div className="flex items-center gap-1">
-              <Users className="h-4 w-4 text-primary" />
-              <span className="text-xs text-muted-foreground">50k+ events</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <Heart className="h-4 w-4 text-red-500" />
-              <span className="text-xs text-muted-foreground">
-                Loved by users
-              </span>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );

@@ -48,15 +48,17 @@ import { SubmitButton } from "@/components/form/submit-button";
 import Google from "@/components/icon/google";
 import Facebook from "@/components/icon/facebook";
 import signInApi from "@/axios/api/signInApi";
-import { Cookie, useAuthStore } from "@/stores/auth";
+import { useAuthStore } from "@/stores/auth";
+import Cookies from "js-cookie";
 
 export default function SignIn() {
-  const { auth, signIn } = useAuthStore()
-
+  const { auth, signIn } = useAuthStore();
 
   const t = useTranslations("auth.signIn");
 
   const [showPassword, setShowPassword] = useState(false);
+
+  const [rememberMe, setRememberMe] = useState(false);
 
   const onSubmit = (values: z.infer<typeof formLoginSchema>) => {
     signIn(values);
@@ -70,10 +72,10 @@ export default function SignIn() {
   const { control, formState } = form;
   return (
     <>
-      {/* <div className="text-center mb-2">
+      <div className="text-center mb-2">
         <h1 className="text-3xl font-bold">{t("welcomeBack")}</h1>
         <p className="text-muted-foreground">{t("signInSubtitle")}</p>
-      </div> */}
+      </div>
       <Card className="border-0 shadow-xl">
         <CardHeader className="space-y-1 pb-4">
           <CardTitle className="text-2xl text-center">{t("signIn")}</CardTitle>
@@ -86,7 +88,7 @@ export default function SignIn() {
           <Form {...form}>
             <form
               onSubmit={form.handleSubmit(onSubmit)}
-              className="space-y-6 max-w-sm mx-auto"
+              className="space-y-4 max-w-sm mx-auto"
             >
               {/* Email */}
               <FormField
@@ -94,11 +96,12 @@ export default function SignIn() {
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>{t("emailAddress")}</FormLabel>
+                    <FormLabel htmlFor="email">{t("emailAddress")}</FormLabel>
                     <FormControl>
                       <div className="relative">
                         <Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                         <Input
+                          id="email"
                           placeholder="you@example.com"
                           {...field}
                           className={cn("pl-10", {
@@ -119,11 +122,12 @@ export default function SignIn() {
                 name="password"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>{t("password")}</FormLabel>
+                    <FormLabel htmlFor="password">{t("password")}</FormLabel>
                     <FormControl>
                       <div className="relative">
                         <Lock className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                         <Input
+                          id="password"
                           type={showPassword ? "text" : "password"}
                           placeholder="••••••"
                           {...field}
@@ -150,7 +154,35 @@ export default function SignIn() {
                 )}
               />
 
-              <SubmitButton label={t("signIn")} className="w-full" />
+              {/* Remember Me & Forgot Password */}
+              <div className="flex items-center justify-between">
+                <div className="flex items-center space-x-2">
+                  <Checkbox
+                    id="remember"
+                    checked={rememberMe}
+                    onCheckedChange={(checked) =>
+                      setRememberMe(checked as boolean)
+                    }
+                  />
+                  <Label
+                    htmlFor="remember"
+                    className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                  >
+                    Remember me
+                  </Label>
+                </div>
+                <Link
+                  href={"forgot-password"}
+                  className="text-sm text-primary hover:underline"
+                >
+                  Forgot password?
+                </Link>
+              </div>
+
+              <SubmitButton
+                label={t("signIn")}
+                className="w-full gradient-brand"
+              />
             </form>
           </Form>
 
@@ -165,8 +197,6 @@ export default function SignIn() {
               </span>
             </div>
           </div>
-
-          {Cookie.get('tho')}
 
           {/* Social Sign In Options */}
           <div className="grid grid-cols-2 gap-4">
@@ -194,6 +224,26 @@ export default function SignIn() {
           </div>
         </CardContent>
       </Card>
+
+      <div className="mt-8 text-center">
+        <p className="text-sm text-muted-foreground mb-4">{t("trustText")}</p>
+        <div className="flex justify-center gap-6">
+          <div className="flex items-center gap-1">
+            <Star className="h-4 w-4 text-yellow-500" />
+            <span className="text-xs text-muted-foreground">4.9/5 rating</span>
+          </div>
+          <div className="flex items-center gap-1">
+            <Users className="h-4 w-4 text-primary" />
+            <span className="text-xs text-muted-foreground">50k+ events</span>
+          </div>
+          <div className="flex items-center gap-1">
+            <Heart className="h-4 w-4 text-red-500" />
+            <span className="text-xs text-muted-foreground">
+              Loved by users
+            </span>
+          </div>
+        </div>
+      </div>
     </>
   );
 }

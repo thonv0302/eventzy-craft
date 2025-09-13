@@ -16,7 +16,28 @@
       "enterCredentials": "Nhập thông tin đăng nhập của bạn để truy cập tài khoản",
       "password": "Mật khẩu",
       "orContinueWith": "Hoặc tiếp tục với",
-      "emailAddress": "Địa chỉ email"
+      "emailAddress": "Địa chỉ email",
+      "trustText": "Hàng nghìn nhà tổ chức sự kiện tin tưởng EventzyCraft"
+    },
+    "signUp": {
+      "signUp": "Đăng ký",
+      "createAccount": "Tạo tài khoản EventCraft miễn phí của bạn",
+      "createYourAccount": "Tạo tài khoản của bạn",
+      "joinCreators": "Tham gia cùng hàng nghìn nhà tổ chức sự kiện và bắt đầu lên kế hoạch cho những",
+      "fullName": "Tên đầy đủ",
+      "password": "Mật khẩu",
+      "confirmPassword": "Xác nhận mật khẩu",
+      "alreadyHaveAccount": "Bạn đã có tài khoản",
+      "signInHere": "Đăng nhập tại đây",
+      "whatYouGet": "Bạn nhận được gì với EventCraft:",
+      "freeForever": "Miễn phí trọn đời",
+      "startFreePlan": "Bắt đầu với gói miễn phí của chúng tôi",
+      "easyCollaboration": "Cộng tác dễ dàng",
+      "shareWithGuests": "Chia sẻ với khách mời ngay lập tức",
+      "beautifulDesigns": "Thiết kế đẹp mắt",
+      "professionalTemplates": "Mẫu chuyên nghiệp",
+      "quickSetup": "Thiết lập nhanh",
+      "createEventsInMinutes": "Tạo sự kiện chỉ trong vài phút"
     }
   }
 }

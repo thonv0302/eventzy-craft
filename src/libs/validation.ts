@@ -9,4 +9,6 @@ const passwordSchema = z
   .string()
   .min(6, "Password must be at least 6 characters");
 
-export { emailSchema, passwordSchema };
+const userNameSchema = z.string().min(1, "Username is required");
+
+export { emailSchema, passwordSchema, userNameSchema };

@@ -17,5 +17,14 @@ export const routing = defineRouting({
     "sign-up": {
       vi: "dang-ky",
     },
+    "/": {
+      vi: "/",
+    },
+    "forgot-password": {
+      vi: "quen-mat-khau",
+    },
+    "passwprd-reset/[tokenId]": {
+      vi: "dat-lai-mat-khau",
+    },
   },
 });

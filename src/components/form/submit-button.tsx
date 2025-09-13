@@ -35,8 +35,6 @@ const SubmitButton = ({
       size={size}
       className={cn("cursor-pointer", className)}
     >
-      {pending && <LucideLoaderCircle className="size-4 animate-spin" />}
-      {label}
       {pending
         ? null
         : icon && (
@@ -46,6 +44,8 @@ const SubmitButton = ({
               })}
             </span>
           )}
+      {pending && <LucideLoaderCircle className="size-4 animate-spin" />}
+      {label}
     </Button>
   );
 };

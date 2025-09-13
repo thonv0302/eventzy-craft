@@ -17,7 +17,28 @@
       "enterCredentials": "Enter your credentials to access your account",
       "password": "Password",
       "orContinueWith": "Or continue with",
-      "emailAddress": "Email address"
+      "emailAddress": "Email address",
+      "trustText": "Join thousands of event creators who trust EventzyCraft"
+    },
+    "signUp": {
+      "signUp": "Sign Up",
+      "createAccount": "Create your free EventCraft account",
+      "createYourAccount": "Create your account",
+      "joinCreators": "Join thousands of event creators and start planning amazing celebrations",
+      "fullName": "Full name",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "alreadyHaveAccount": "Already have an account",
+      "signInHere": "Sign in here",
+      "whatYouGet": "What you get with EventCraft:",
+      "freeForever": "Free Forever",
+      "startFreePlan": "Start with our free plan",
+      "easyCollaboration": "Easy Collaboration",
+      "shareWithGuests": "Share with guests instantly",
+      "beautifulDesigns": "Beautiful Designs",
+      "professionalTemplates": "Professional templates",
+      "quickSetup": "Quick Setup",
+      "createEventsInMinutes": "Create events in minutes"
     }
   }
 }
